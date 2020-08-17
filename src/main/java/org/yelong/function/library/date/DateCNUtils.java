@@ -6,26 +6,29 @@ import org.yelong.commons.util.Dates;
 
 /**
  * 中国日期工具类
- * @author PengFei
+ * 
  * @since 1.0.0
  */
 public class DateCNUtils {
-	
-	//不允许实例化
-	private DateCNUtils() {}
-	
+
+	// 不允许实例化
+	private DateCNUtils() {
+	}
+
 	/**
 	 * 格式化星期
+	 * 
 	 * @param date 日期
 	 * @return 格式化后的星期
 	 */
 	public static String formatDayOfWeek(Date date) {
 		return formatDayOfWeek(Dates.getDayOfWeek(date));
 	}
-	
+
 	/**
 	 * 格式化星期
-	 * @param dayOfWeek	{@link Dates#getDayOfWeek(Date)}
+	 * 
+	 * @param dayOfWeek {@link Dates#getDayOfWeek(Date)}
 	 * @return 格式化后的星期
 	 */
 	public static String formatDayOfWeek(int dayOfWeek) {
@@ -53,9 +56,9 @@ public class DateCNUtils {
 			value = "星期六";
 			break;
 		default:
-			throw new IllegalArgumentException("无效的星期："+dayOfWeek);
+			throw new IllegalArgumentException("无效的星期：" + dayOfWeek);
 		}
 		return value;
 	}
-	
+
 }
